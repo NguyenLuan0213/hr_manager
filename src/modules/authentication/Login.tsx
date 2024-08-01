@@ -39,7 +39,7 @@ const Login: React.FC = () => {
                         <div className="auth-logo">
                             <img src={Logo} alt="Logo" />
                         </div>
-                        <h1 className="auth-title">Log in.</h1>
+                        <h1 className="auth-title">Đăng nhập</h1>
 
                         <form onSubmit={handleLogin}>
                             <div className="form-group position-relative has-icon-left mb-4">
@@ -66,20 +66,8 @@ const Login: React.FC = () => {
                                     <i className="bi bi-shield-lock"></i>
                                 </div>
                             </div>
-                            <div className="form-check form-check-lg d-flex align-items-end">
-                                <input className="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label text-gray-600">
-                                    Keep me logged in
-                                </label>
-                            </div>
                             <button type="submit" className="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
                         </form>
-                        <div className="text-center mt-5 text-lg fs-4">
-                            <p className="text-gray-600">Don't have an account? <a href="auth-register.html"
-                                className="font-bold">Sign
-                                up</a>.</p>
-                            <p><a className="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p>
-                        </div>
                     </div>
                 </div>
                 <div className="col-lg-7 d-none d-lg-block">

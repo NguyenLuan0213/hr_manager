@@ -60,8 +60,8 @@ const EmployeesByID: React.FC = () => {
             <div className="emp-card">
                 <div className="emp-card-body">
                     <div className="emp-buttons align-left">
-                        <a className="emp-btn emp-btn-primary" onClick={handleUpdateEmployee}>Edit</a>
-                        <a className="emp-btn emp-btn-danger" onClick={() => handleDeleteEmployee(employee?.id || 0)}>Delete</a>
+                        <a className="emp-btn emp-btn-primary" onClick={handleUpdateEmployee}>Chỉnh sửa</a>
+                        <a className="emp-btn emp-btn-danger" onClick={() => handleDeleteEmployee(employee?.id || 0)}>Xóa nhân viên</a>
                     </div>
                 </div>
             </div>

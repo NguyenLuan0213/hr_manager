@@ -173,7 +173,7 @@ export const getEmployees = (): Omit<Employee, 'username' | 'password'>[] => {
 };
 
 export const getMockEmployeeById = (id: number): Employee | undefined => {
-    return mockEmployees.find(emp => emp.id === id);
+    return mockEmployees.find(emp => emp.id === id)
 };
 
 export const addMockEmployee = (employee: Employee): Employee => {
