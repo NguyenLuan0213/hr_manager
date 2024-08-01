@@ -1,0 +1,136 @@
+.btn-red {
+    background-color: #eb5757;
+    color: #fff;
+}
+.btn-red:hover {
+    background-color: #d84f4f;
+    color: #fff;
+}
+.btn-green {
+    background-color: #1a8917;
+    color: #fff;
+}
+.btn-green:hover {
+    background-color: #177414;
+    color: #fff;
+}
+.btn-orange {
+    background-color: #f2994a;
+    color: #fff;
+}
+.btn-orange:hover {
+    background-color: #dd8b43;
+    color: #fff;
+}
+
+/*---style filter-header---*/
+.filter-header .filter-header__left .filter-title {
+    font-size: 18px;
+}
+.filter-header .filter-header__left a {
+    font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+   .filter-header .filter-header__left {
+       margin-bottom: 16px;
+   }
+   .filter-header .filter-header__left .filter-title {
+       display: block;
+       width: 100%;
+       margin-bottom: 8px;
+   }
+   .filter-header .filter-header__right .list-button button {
+       white-space: nowrap;
+       width: calc(100% / 3 - 9px);
+   } 
+}
+
+/*---style list-tag---*/
+ul.nav.list-tag {
+    font-size: 14px;
+    margin-left: -0.5rem;
+    margin-bottom: 1rem
+}
+ul.nav.list-tag .nav-item .nav-link {
+    padding: .25rem 0.5rem;
+    color: #444;
+    position: relative;
+}
+ul.nav.list-tag .nav-item .nav-link:after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+    color: #ddd;
+}
+ul.nav.list-tag .nav-item:last-child .nav-link:after {
+    display: none;
+}
+ul.nav.list-tag .nav-item .nav-link.active {
+    font-weight: 700;
+}
+
+/*---style input group---*/
+.filter-body__bottom .left .ingroup-apply {
+    width: 60%;
+}
+@media screen and (max-width: 768px) {
+    .filter-body__bottom .left {
+        flex-wrap: wrap;
+    }
+    .filter-body__bottom .left .ingroup-apply,
+    .filter-body__bottom .left .ingroup-sort {
+        width: 100%;
+    }
+    .filter-body__bottom .left .ingroup-apply.me-3 {
+        margin-right: 0 !important;
+    }
+}
+
+/*---style table-top---*/
+.table-filter .table-top .ingroup-entries select {
+    width: 75px;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+/*---style table-container---*/
+.table-filter .table-container {
+    overflow-x: auto;
+}
+.table-filter .table tr th {
+    position: relative;
+}
+.table-filter .table tr th .data-sort {
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+.table-filter .table .data-sort .sort {
+    height: 14px;
+    cursor: pointer;
+}
+.table-filter .table .data-sort i {
+    font-size: 12px;
+    padding: 5px;
+    color: #ddd;
+}
+.table-filter .table .data-sort i:hover {
+    color: #999;
+}
+.table-filter .table .data-sort .sort.active i {
+    color: #444;
+}
+
+/*---style table-bottom---*/
+.table-filter .table-bottom {
+    margin: 2rem 0;
+}
+.table-filter .table-bottom .table-bt-pagination ul.pagination {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+    .table-filter .table-bottom .table-bt-info {
+        margin-bottom: 16px;
+    }
+}

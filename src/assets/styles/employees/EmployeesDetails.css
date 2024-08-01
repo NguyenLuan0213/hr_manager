@@ -1,0 +1,92 @@
+.emp-employee-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Thêm dòng này để căn giữa nội dung bên trong */
+}
+
+.emp-employee-container h2 {
+    color: #333;
+}
+
+.emp-employee-details {
+    margin-top: 20px;
+    text-align: left; /* Đảm bảo các chi tiết nhân viên không bị căn giữa */
+}
+
+.emp-employee-details h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.emp-employee-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.emp-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin: 0 auto 20px;
+}
+
+.emp-avatar-image {
+    width: 100%;
+    height: auto;
+}
+
+.emp-card {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emp-card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.emp-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.emp-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.emp-btn-primary {
+    background-color: #007bff;
+}
+
+.emp-btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.emp-btn-danger {
+    background-color: #dc3545;
+}
+
+.emp-btn-danger:hover {
+    background-color: #c82333;
+}
