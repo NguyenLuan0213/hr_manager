@@ -23,7 +23,7 @@ const EmployeeUpdate: React.FC = () => {
         password: '',
         avatar: '',
     });
-    
+
 
     useEffect(() => {
         if (id) {
@@ -158,11 +158,12 @@ const EmployeeUpdate: React.FC = () => {
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                 />
-                                                {errors.name && <small className="text-danger">{errors.name}</small>}
                                                 <div className="form-control-icon">
                                                     <i className="bi bi-person"></i>
                                                 </div>
                                             </div>
+                                            {errors.name && <small className="text-danger">{errors.name}</small>}
+
                                         </div>
                                     </div>
                                     <div className="col-md-4">
@@ -180,11 +181,11 @@ const EmployeeUpdate: React.FC = () => {
                                                     value={formData.email}
                                                     onChange={handleChange}
                                                 />
-                                                {errors.email && <small className="text-danger">{errors.email}</small>}
                                                 <div className="form-control-icon">
                                                     <i className="bi bi-envelope"></i>
                                                 </div>
                                             </div>
+                                            {errors.email && <small className="text-danger">{errors.email}</small>}
                                         </div>
                                     </div>
                                     <div className="col-md-4">
@@ -202,11 +203,11 @@ const EmployeeUpdate: React.FC = () => {
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                 />
-                                                {errors.phone && <small className="text-danger">{errors.phone}</small>}
                                                 <div className="form-control-icon">
                                                     <i className="bi bi-phone"></i>
                                                 </div>
                                             </div>
+                                            {errors.phone && <small className="text-danger">{errors.phone}</small>}
                                         </div>
                                     </div>
                                     <div className="col-md-4">
@@ -224,12 +225,13 @@ const EmployeeUpdate: React.FC = () => {
                                                 <div className="form-control-icon">
                                                     {formData.gender ? (
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-standing" viewBox="0 0 16 16">
-                                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0z"/>
+                                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0z" />
                                                         </svg>
                                                     ) : (
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-dress" viewBox="0 0 16 16">
-                                                            <path d="M8 0a2 2 0 0 1 2 2c0 .736-.404 1.375-1 1.723V5h3.05c.253 0 .479.146.6.377l2.5 5A.75.75 0 0 1 14.5 12H11v3.25a.75.75 0 0 1-1.5 0V12H6v3.25a.75.75 0 0 1-1.5 0V12H1.5a.75.75 0 0 1-.65-1.123l2.5-5A.75.75 0 0 1 3.95 5H7V3.723A2.001 2.001 0 0 1 8 0zM4.36 10.5h7.28l-2-4H6.36l-2 4z"/>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-standing-dress" viewBox="0 0 16 16">
+                                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z" />
                                                         </svg>
+
                                                     )}
                                                 </div>
                                             </div>
@@ -249,11 +251,11 @@ const EmployeeUpdate: React.FC = () => {
                                                     value={formData.born.toISOString().substr(0, 10)}
                                                     onChange={handleDateChange}
                                                 />
-                                                {errors.born && <small className="text-danger">{errors.born}</small>}
                                                 <div className="form-control-icon">
                                                     <i className="bi bi-calendar"></i>
                                                 </div>
                                             </div>
+                                            {errors.born && <small className="text-danger">{errors.born}</small>}
                                         </div>
                                     </div>
                                     <div className="col-md-4">
@@ -271,11 +273,11 @@ const EmployeeUpdate: React.FC = () => {
                                                     value={formData.password}
                                                     onChange={handleChange}
                                                 />
-                                                {errors.password && <small className="text-danger">{errors.password}</small>}
                                                 <div className="form-control-icon">
                                                     <i className="bi bi-shield-lock"></i>
                                                 </div>
                                             </div>
+                                            {errors.password && <small className="text-danger">{errors.password}</small>}
                                         </div>
                                     </div>
                                     <div className="col-md-4">
@@ -293,11 +295,11 @@ const EmployeeUpdate: React.FC = () => {
                                                     value={formData.role}
                                                     onChange={handleChange}
                                                 />
-                                                {errors.role && <small className="text-danger">{errors.role}</small>}
                                                 <div className="form-control-icon">
                                                     <i className="bi bi-people"></i>
                                                 </div>
                                             </div>
+                                            {errors.role && <small className="text-danger">{errors.role}</small>}
                                         </div>
                                     </div>
                                     <div className="col-12 d-flex justify-content-end">

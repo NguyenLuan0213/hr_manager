@@ -66,7 +66,7 @@ const Employees: React.FC = () => {
                 <div className="input-group">
                     <input
                         type="text"
-                        placeholder="Search by name, phone, or email..."
+                        placeholder="Tìm kiếm theo tên, email, số điện thoại..."
                         value={searchTerm}
                         onChange={handleSearchChange}
                     />

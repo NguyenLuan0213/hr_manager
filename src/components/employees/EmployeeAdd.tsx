@@ -18,14 +18,14 @@ const EmployeeAdd: React.FC = () => {
 
     const validateForm = () => {
         const newErrors: { [key: string]: string } = {};
-        if (!name) newErrors.name = 'Name is required';
-        if (!email) newErrors.email = 'Email is required';
-        if (!phone) newErrors.phone = 'Phone number is required';
-        if (!username) newErrors.username = 'Username is required';
-        if (!password) newErrors.password = 'Password is required';
-        if (!role) newErrors.role = 'Role is required';
-        if (!born) newErrors.born = 'Date of birth is required';
-        if (idDepartment < 1) newErrors.idDepartment = 'ID PB is required';
+        if (!name) newErrors.name = 'Họ và tên không hợp lệ';
+        if (!email) newErrors.email = 'Email không hợp lệ';
+        if (!phone || !/^\+?\d+$/.test(phone)) newErrors.phone = 'Số điện không hợp lệ';
+        if (!username) newErrors.username = 'Username không hợp lệ';
+        if (!password) newErrors.password = 'Password không hợp lệ';
+        if (!role) newErrors.role = 'Chức vụ ko hợp lệ';
+        if (!born) newErrors.born = 'Ngày sinh không hợp lệ';
+        if (idDepartment < 1) newErrors.idDepartment = 'Mã phòng ban không hợp lệ';
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -326,11 +326,11 @@ const EmployeeAdd: React.FC = () => {
                                     </div>
                                     {/* Buttons */}
                                     <div className="col-12 d-flex justify-content-end">
-                                        <button type="submit" className="btn btn-primary me-1 mb-1">
-                                            Add
-                                        </button>
                                         <button type="button" className="btn btn-light-secondary me-1 mb-1" onClick={handleReset}>
-                                            Reset
+                                            Đặt lại
+                                        </button>
+                                        <button type="submit" className="btn btn-primary me-1 mb-1">
+                                            Thêm nhân viên
                                         </button>
                                     </div>
                                 </div>

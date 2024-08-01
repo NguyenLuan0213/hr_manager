@@ -25,15 +25,20 @@ const EmployeesByID: React.FC = () => {
         navigate(`/employees/update/${id}`);
     };
 
-    const handleDeleteEmployee = (id: number) => {
-        if (id !== undefined) {
+const handleDeleteEmployee = (id: number) => {
+    if (id !== undefined) {
+        const isConfirmed = window.confirm('Bạn có chắc chắn muốn xóa nhân viên này không?');
+        if (isConfirmed) {
             alert('Đã xóa nhân viên');
             deleteMockEmployee(id);
             navigate('/employees');
         } else {
-            alert('Không tìm thấy mã nhân viên');
+            alert('Hủy xóa nhân viên');
         }
+    } else {
+        alert('Không tìm thấy mã nhân viên');
     }
+};
 
     return (
         <div className="emp-employee-container">
@@ -49,7 +54,7 @@ const EmployeesByID: React.FC = () => {
                             <p><strong>Tên:</strong> {employee.name}</p>
                             <p><strong>SĐT:</strong> {employee.phone}</p>
                             <p><strong>Email:</strong> {employee.email}</p>
-                            <p><strong>Giới tính:</strong> {employee.gender ? 'Male' : 'Female'}</p>
+                            <p><strong>Giới tính:</strong> {employee.gender ? 'Female' : 'Male'}</p>
                             <p><strong>Ngày Sinh:</strong> {new Date(employee.born).toDateString()}</p>
                             <p><strong>Trạng Thái:</strong> {employee.status ? 'Active' : 'Inactive'}</p>
                             <p><strong>Chức Vụ:</strong> {employee.role}</p>
